@@ -35,8 +35,7 @@ class Product(Base):
     created_date = Column(DateTime, default=func.now())
     updated_date = Column(DateTime, default=func.now(), onupdate=func.now())
 
-# Database connection
-engine = create_engine('mysql+mysqldb://root:root@localhost/product_db') #replace with your database credentials
+engine = create_engine('mysql+mysqldb://root:root@localhost/product_db') 
 Base.metadata.create_all(engine)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
