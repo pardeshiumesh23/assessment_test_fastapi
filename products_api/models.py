@@ -28,7 +28,7 @@ class Product(Base):
     name = Column(String(100))
     category = Column(Enum(ProductCategory))
     description = Column(String(250))
-    product_image = Column(String(2048)) # Increased length for URL
+    product_image = Column(String(2048))  
     sku = Column(String(100))
     unit_of_measure = Column(Enum(UnitOfMeasure))
     lead_time = Column(Integer)
